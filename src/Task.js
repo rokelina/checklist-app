@@ -37,7 +37,7 @@ function TaskItem({ task, onEdit, onDone, onDelete }) {
         >
           {!task.isChecked ? "Mark As ✅" : "Checked ✔️"}
         </button>
-        <button onClick={() => onDelete(task.id)}>Delete</button>
+        <button onClick={() => onDelete(task.id)}>🗑</button>
       </label>
     </div>
   );

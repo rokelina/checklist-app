@@ -22,6 +22,7 @@ function App() {
         isChecked: false,
         isDeleted: false,
         dateCreated: null,
+        dateCompleted: null,
         dateDeleted: null,
       },
     ]);
