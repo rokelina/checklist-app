@@ -1,7 +1,7 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import AddNewTask from "./AddNewTask";
-import TaskList from "./TaskList";
+import TaskContainer from "./TaskList";
 //event handler to tack isChecked
 //event handler to track isDeleted
 //form element wrapping an input field. Event handler onSubmit creates an adds a newTask object to the tasks array
@@ -60,7 +60,7 @@ function App() {
     <div className="App">
       <h2 className="app-title">My checklist</h2>
       <AddNewTask onAddTask={handleCreateTask} />
-      <TaskList
+      <TaskContainer
         tasks={tasks}
         onEditTask={handleEditTask}
         onDoneTask={handleDoneTask}

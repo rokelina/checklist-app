@@ -1,20 +1,17 @@
 .App{
-    margin: 3rem;
+    margin: 4rem;
     font-family: Arial, Helvetica, sans-serif;
     color: #222222;
-    align-items: center;
-    align-content: center;
-  }
-
-  .task-item{
-    margin-top: 1rem;
-    padding: 2px;   
-    border-color: #222222; 
-  }
-
-  .button{
-    margin-left: 2rem;
+    justify-content: center;
+    text-align: center;
+    display: grid;
     
   }
+
+  .add-task{
+    border-color: rgb(39, 39, 39);
+  }
+
+  
 
   

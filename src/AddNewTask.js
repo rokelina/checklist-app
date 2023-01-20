@@ -15,7 +15,7 @@ function AddNewTask({ onAddTask }) {
       <input
         value={taskName}
         onChange={(event) => setTaskName(event.target.value)}
-        className="add-item-input"
+        className="add-task"
         placeholder="Add a task..."
       />
       <button

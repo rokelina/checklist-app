@@ -14,14 +14,18 @@ function TaskItem({ task, onEdit, onDone, onDelete }) {
             onEdit({ ...task, title: e.target.value });
           }}
         />
-        <button onClick={() => setIsEditing(false)}>Save</button>
+        <button className="edit-button" onClick={() => setIsEditing(false)}>
+          Save
+        </button>
       </>
     );
   } else {
     taskContent = (
       <>
         {task.title}
-        <button onClick={() => setIsEditing(true)}>Edit</button>
+        <button className="edit-button" onClick={() => setIsEditing(true)}>
+          Edit
+        </button>
       </>
     );
   }
@@ -30,14 +34,16 @@ function TaskItem({ task, onEdit, onDone, onDelete }) {
       <label>
         {taskContent}
         <button
-          className="button"
+          className="check-button"
           onClick={() => {
             onDone({ ...task, isChecked: !task.isChecked });
           }}
         >
-          {!task.isChecked ? "Mark As ✅" : "Checked ✔️"}
+          {!task.isChecked ? "Mark Done" : "Done"}
         </button>
-        <button onClick={() => onDelete(task.id)}>🗑</button>
+        <button className="delete-button" onClick={() => onDelete(task.id)}>
+          Delete
+        </button>
       </label>
     </div>
   );

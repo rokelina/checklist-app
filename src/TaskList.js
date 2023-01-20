@@ -1,21 +1,21 @@
 import TaskItem from "./Task";
 import "./TaskList.css";
 
-function TaskList({ tasks, onEditTask, onDoneTask, onDeleteTask }) {
+function TaskContainer({ tasks, onEditTask, onDoneTask, onDeleteTask }) {
   return (
-    <ul>
+    <div className="list-container">
       {tasks.map((task) => (
-        <li key={task.id}>
+        <div className="task-item" key={task.id}>
           <TaskItem
             task={task}
             onEdit={onEditTask}
             onDone={onDoneTask}
             onDelete={onDeleteTask}
           />
-        </li>
+        </div>
       ))}
-    </ul>
+    </div>
   );
 }
 
-export default TaskList;
+export default TaskContainer;
