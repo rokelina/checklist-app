@@ -1,10 +1,11 @@
 .list-container{
-    max-width: 450px;
-    width: 450px;
-    list-style-type: none;
-    align-items: left;
+  padding: 1rem;
+  max-width: 450px;
+  width: 450px;
+  list-style-type: none;
+  align-items: left;
   }
-  
+
 .task-item{
   margin-top: 10px;
 }
