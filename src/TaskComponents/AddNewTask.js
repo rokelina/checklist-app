@@ -1,8 +1,5 @@
 import { useState } from "react";
 
-//check - keeps track of the task name input value
-//check - returns a task item that will be added to the task list when the action onAddTask fires
-
 function AddNewTask({ onAddTask }) {
   const [taskName, setTaskName] = useState("");
 

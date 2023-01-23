@@ -1,57 +1,45 @@
 import "./App.css";
-import { useEffect, useState } from "react";
-import AddNewTask from "./AddNewTask";
-import TaskContainer from "./TaskList";
-import NavBar from "./NavBar";
+import { useEffect, useReducer } from "react";
+import AddNewTask from "./TaskComponents/AddNewTask";
+import TaskContainer from "./TaskComponents/TaskContainer";
+import NavBar from "./TaskComponents/NavBar";
+import tasksReducer from "./reducer";
 
 function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, dispatch] = useReducer(tasksReducer, []);
+
   useEffect(() => {
     console.log(tasks);
   }, [tasks]);
 
   const handleCreateTask = function (inputValue) {
-    setTasks([
-      ...tasks,
-      {
-        id: startId++,
-        title: inputValue,
-        isChecked: false,
-        isDeleted: false,
-        dateCreated: null,
-        dateCompleted: null,
-        dateDeleted: null,
-      },
-    ]);
+    dispatch({
+      type: "added",
+      id: startId++,
+      title: inputValue,
+    });
   };
 
   const handleEditTask = function (task) {
-    setTasks(
-      tasks.map((t) => {
-        if (t.id === task.id) {
-          return task;
-        } else {
-          return t;
-        }
-      })
-    );
+    dispatch({
+      type: "edited",
+      task: task,
+    });
   };
 
   const handleDoneTask = function (task) {
-    setTasks(
-      tasks.map((t) => {
-        if (t.id === task.id) {
-          return task;
-        } else {
-          return t;
-        }
-      })
-    );
+    dispatch({
+      type: "completed",
+      task: task,
+    });
   };
 
-  function handleDeleteTask(taskId) {
-    setTasks(tasks.filter((t) => t.id !== taskId));
-  }
+  const handleDeleteTask = function (taskId) {
+    dispatch({
+      type: "deleted",
+      id: taskId,
+    });
+  };
 
   return (
     <div className="App">
