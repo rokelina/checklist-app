@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+//sets the task title
+//throws an alert if title is empty
+
 function AddNewTask({ onAddTask }) {
   const [taskName, setTaskName] = useState("");
 
