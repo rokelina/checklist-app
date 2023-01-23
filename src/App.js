@@ -60,7 +60,6 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <h2 className="app-title">TaskList Name</h2>
       <AddNewTask onAddTask={handleCreateTask} />
       <TaskContainer
         tasks={tasks}

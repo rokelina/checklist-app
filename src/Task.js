@@ -39,9 +39,12 @@ function TaskItem({ task, onEdit, onDone, onDelete }) {
             onDone({ ...task, isChecked: !task.isChecked });
           }}
         >
-          {!task.isChecked ? "Mark Done" : "Done"}
+          {!task.isChecked ? "Mark Done" : "✔️Done"}
         </button>
         <button className="delete-button" onClick={() => onDelete(task.id)}>
+          <span role="img" aria-label="delete-sign-x">
+            ❌
+          </span>
           Delete
         </button>
       </label>

@@ -2,7 +2,6 @@
     width: 100%;
     height: 4rem;
     position: fixed;
-
     background-color: rgb(21, 123, 113);
     display: flex;
     justify-content: space-between;
@@ -12,12 +11,11 @@
 }
 
 .nav-right{
-   padding: 24px;
+   padding: 1.5rem;
    width: calc(25% - 10px);  
 }
 
 .nav-left{
-    margin-left: 2rem;
-    
+    padding-bottom: 3rem;
     width: calc(50% - 10px);  
 }
