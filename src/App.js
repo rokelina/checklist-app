@@ -3,10 +3,6 @@ import { useEffect, useState } from "react";
 import AddNewTask from "./AddNewTask";
 import TaskContainer from "./TaskList";
 import NavBar from "./NavBar";
-//event handler to tack isChecked
-//event handler to track isDeleted
-//form element wrapping an input field. Event handler onSubmit creates an adds a newTask object to the tasks array
-// const tasks is an array of task objects
 
 function App() {
   const [tasks, setTasks] = useState([]);
