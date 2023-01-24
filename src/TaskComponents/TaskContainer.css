@@ -1,4 +1,5 @@
 .list-container{
+  margin-top: 1rem;
   max-width: 450px;
   width: 450px;
   align-items: left;
@@ -6,14 +7,16 @@
 
 .new-tasks{
   list-style-type: none;
+  width: 100%;
 }
 .completed-tasks{
   list-style-type: none;
+  width: 100%;
+  
 }
-
 .task-item{
   margin-top: 10px;
-  background-color: rgb(178, 170, 170);
+  background-color: rgba(241, 241, 241, 0.874);
 }
 .check-button {
   margin-left: 1rem;
