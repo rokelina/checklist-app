@@ -1,23 +1,38 @@
 .App{
     font-family: Arial, Helvetica, sans-serif;
     color: #222222;
-    justify-content: center;
-    text-align: center;
     display: grid;
-
-    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 4rem auto 4rem auto;
+    height:100vh;
+    background-color: rgb(237, 236, 236)
   }
-.app-title{
-  margin-top: 5rem;
-  padding-top: 2rem;
+
+.card{
+  grid-column: 2/3 ;
+  position: relative;
+  top: 3rem;
+  
 }
 
+.add-form{
+  text-align: center;
+  margin: 0 auto;
+  
+}
 .add-task{
-  margin-top: 6rem;
   border-color: rgb(39, 39, 39);
+  font-size: small;  
+  border-radius: 5px;
+  text-align: center;
 }
 
+.add-button{
+  font-size: small;
+  margin-left: 5px;
+}
 
   
-
-  
+.mouse-hover{
+  background-color: grey;
+}

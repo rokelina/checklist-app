@@ -1,33 +1,61 @@
 .list-container{
-  margin-top: 1rem;
-  max-width: 450px;
-  width: 450px;
-  align-items: left;
+  
   }
 
-.new-tasks{
+ul{
   list-style-type: none;
-  width: 100%;
+  margin: 5px;
+  padding: 5px;
 }
+  
 .completed-tasks{
-  list-style-type: none;
-  width: 100%;
+  position:relative;
+  margin-top:50%;
+  background-color: rgb(228, 228, 228);
+ 
   
 }
-.task-item{
-  margin-top: 10px;
-  background-color: rgba(241, 241, 241, 0.874);
-}
-.check-button {
-  margin-left: 1rem;
-  justify-content: right;
+.new-tasks{
+  
 
 }
+.task-item{
+  text-align: left;
+  height: fit-content;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 5px;
+  font-size:1rem;
+  padding: 5px;
+  
+  
+}
+
+.check-button {
+  position: absolute;
+  right: 5rem;
+  
+
+}
+.edit-form{
+  border: none;
+  width: fit-content;
+  
+}
 .delete-button {
-  justify-content: right;
+  position:absolute;
+  right: 20px;
+  
 }
 
 .edit-button{
-  margin-left: 1rem;
-  justify-content: right;
+  position: absolute;
+  right: 9rem;
+}
+button{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
 }

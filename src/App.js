@@ -44,13 +44,15 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <AddNewTask onAddTask={handleCreateTask} />
-      <TaskContainer
-        tasks={tasks}
-        onEditTask={handleEditTask}
-        onDoneTask={handleDoneTask}
-        onDeleteTask={handleDeleteTask}
-      />
+      <div className="card">
+        <AddNewTask onAddTask={handleCreateTask} />
+        <TaskContainer
+          tasks={tasks}
+          onEditTask={handleEditTask}
+          onDoneTask={handleDoneTask}
+          onDeleteTask={handleDeleteTask}
+        />
+      </div>
     </div>
   );
 }

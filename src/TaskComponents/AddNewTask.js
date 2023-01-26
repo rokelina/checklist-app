@@ -11,14 +11,16 @@ function AddNewTask({ onAddTask }) {
       onSubmit={(e) => {
         e.preventDefault();
       }}
+      className="add-form"
     >
       <input
         value={taskName}
         onChange={(event) => setTaskName(event.target.value)}
-        className="add-task"
         placeholder="Add a task..."
+        className="add-task"
       />
       <button
+        className="add-button"
         onClick={() => {
           if (taskName.trim() !== "") {
             setTaskName("");
@@ -29,7 +31,9 @@ function AddNewTask({ onAddTask }) {
           }
         }}
       >
-        Add
+        <span role="img" aria-label="add-sign">
+          ➕
+        </span>
       </button>
     </form>
   );
