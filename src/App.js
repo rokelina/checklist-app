@@ -7,10 +7,12 @@ import tasksReducer from "./reducer";
 
 function App() {
   const [tasks, dispatch] = useReducer(tasksReducer, []);
+  let startId = 0;
 
-  useEffect(() => {
-    console.log(tasks);
-  }, [tasks]);
+  //added a useEffect to check the changes to [tasks]
+  // useEffect(() => {
+  //   console.log(tasks);
+  // }, [tasks]);
 
   const handleCreateTask = function (inputValue) {
     dispatch({
@@ -56,5 +58,4 @@ function App() {
     </div>
   );
 }
-let startId = 0;
 export default App;

@@ -12,6 +12,7 @@ ul{
 
 .completed-tasks-list{
   text-decoration: line-through;
+  font-style: italic;
 }
 .status-title{
   text-decoration: none;
@@ -39,6 +40,7 @@ button{
 }
 button:hover{
   background-color: rgb(197, 197, 197);
+  cursor: pointer;
 }
 .check-button {
   position: absolute;
