@@ -1,9 +1,14 @@
 import { useState } from "react";
-import classNames from "classnames";
 
 function TaskItem({ task, onEdit, onDone, onDelete }) {
   const [isEditing, setIsEditing] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+
+  function handleHover(event) {
+    event.target.classList.add("mouse-hover");
+  }
+  function removeHover(event) {
+    event.target.classList.remove("mouse-hover");
+  }
 
   let taskContent;
 
@@ -17,7 +22,12 @@ function TaskItem({ task, onEdit, onDone, onDelete }) {
             onEdit({ ...task, title: e.target.value });
           }}
         />
-        <button className="edit-button" onClick={() => setIsEditing(false)}>
+        <button
+          className="edit-button"
+          onClick={() => setIsEditing(false)}
+          onMouseEnter={(e) => handleHover(e)}
+          onMouseLeave={(e) => removeHover(e)}
+        >
           <span role="img" aria-label="save-sign">
             💾
           </span>
@@ -30,10 +40,10 @@ function TaskItem({ task, onEdit, onDone, onDelete }) {
       <>
         {task.title}
         <button
-          className={classNames("edit-button", { "mouse-hover": isHovered })}
+          className="edit-button"
           onClick={() => setIsEditing(true)}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+          onMouseEnter={(e) => handleHover(e)}
+          onMouseLeave={(e) => removeHover(e)}
         >
           <span role="img" aria-label="pencil-sign">
             ✏️
@@ -51,10 +61,17 @@ function TaskItem({ task, onEdit, onDone, onDelete }) {
         onClick={() => {
           onDone({ ...task, isCompleted: !task.isCompleted });
         }}
+        onMouseEnter={(e) => handleHover(e)}
+        onMouseLeave={(e) => removeHover(e)}
       >
         {!task.isCompleted ? "⬜️ Check" : "✅ Done!"}
       </button>
-      <button className="delete-button" onClick={() => onDelete(task.id)}>
+      <button
+        className="delete-button"
+        onClick={() => onDelete(task.id)}
+        onMouseEnter={(e) => handleHover(e)}
+        onMouseLeave={(e) => removeHover(e)}
+      >
         <span role="img" aria-label="delete-trash-sign">
           🗑
         </span>

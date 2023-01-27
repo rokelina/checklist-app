@@ -7,6 +7,7 @@
     position: sticky;
     top: 0;
     border-bottom: 2px solid black;
+    z-index: 1;
 }
 
 .nav-left{
@@ -18,5 +19,4 @@ h1{
     padding: 5px;
     border: 2px solid black;
     border-radius: 5px;
-    
 }
