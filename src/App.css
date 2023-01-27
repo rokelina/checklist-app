@@ -1,18 +1,35 @@
 .App{
-    margin: 3rem;
     font-family: Arial, Helvetica, sans-serif;
     color: #222222;
-    align-items: center;
-    align-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 4rem auto 4rem auto;
+    height:100vh;
+    background-color: rgb(237, 236, 236)
   }
 
-  .task-item{
-    margin-top: 1rem;
-    padding: 2px;   
-    border-color: #222222; 
-  }
+.card{
+  grid-column: 2/3 ;
+  position: relative;
+  top: 3rem;
+  
+}
 
-  .button{
-    margin-left: 2rem;
-    
-  }
+.add-form{
+  text-align: center;
+  margin: 0 auto;
+  
+}
+.add-task{
+  border-color: rgb(39, 39, 39);
+  font-size: small;  
+  border-radius: 5px;
+  text-align: center;
+}
+
+.add-button{
+  font-size: small;
+  margin-left: 5px;
+}
+
+  
