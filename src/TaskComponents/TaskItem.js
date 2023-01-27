@@ -3,13 +3,6 @@ import { useState } from "react";
 function TaskItem({ task, onEdit, onDone, onDelete }) {
   const [isEditing, setIsEditing] = useState(false);
 
-  function handleHover(event) {
-    event.target.classList.add("mouse-hover");
-  }
-  function removeHover(event) {
-    event.target.classList.remove("mouse-hover");
-  }
-
   let taskContent;
 
   if (isEditing) {
@@ -22,12 +15,7 @@ function TaskItem({ task, onEdit, onDone, onDelete }) {
             onEdit({ ...task, title: e.target.value });
           }}
         />
-        <button
-          className="edit-button"
-          onClick={() => setIsEditing(false)}
-          onMouseEnter={(e) => handleHover(e)}
-          onMouseLeave={(e) => removeHover(e)}
-        >
+        <button className="edit-button" onClick={() => setIsEditing(false)}>
           <span role="img" aria-label="save-sign">
             💾
           </span>
@@ -39,12 +27,7 @@ function TaskItem({ task, onEdit, onDone, onDelete }) {
     taskContent = (
       <>
         {task.title}
-        <button
-          className="edit-button"
-          onClick={() => setIsEditing(true)}
-          onMouseEnter={(e) => handleHover(e)}
-          onMouseLeave={(e) => removeHover(e)}
-        >
+        <button className="edit-button" onClick={() => setIsEditing(true)}>
           <span role="img" aria-label="pencil-sign">
             ✏️
           </span>
@@ -61,17 +44,10 @@ function TaskItem({ task, onEdit, onDone, onDelete }) {
         onClick={() => {
           onDone({ ...task, isCompleted: !task.isCompleted });
         }}
-        onMouseEnter={(e) => handleHover(e)}
-        onMouseLeave={(e) => removeHover(e)}
       >
         {!task.isCompleted ? "⬜️ Check" : "✅ Done!"}
       </button>
-      <button
-        className="delete-button"
-        onClick={() => onDelete(task.id)}
-        onMouseEnter={(e) => handleHover(e)}
-        onMouseLeave={(e) => removeHover(e)}
-      >
+      <button className="delete-button" onClick={() => onDelete(task.id)}>
         <span role="img" aria-label="delete-trash-sign">
           🗑
         </span>
