@@ -3,11 +3,18 @@ ul{
   margin: 5px;
   padding: 5px;
 }
-
+.new-tasks{
+  position: relative;
+  margin-top: 10%;
+  max-height: 200px;
+  overflow-y: auto;
+}
 .completed-tasks-container{
-  position:relative;
+  position: relative;
   margin-top:30%;
   background-color: rgb(228, 228, 228);
+  max-height: 100px;
+  overflow-y: auto;
 }
 
 .completed-tasks-list{
@@ -45,6 +52,7 @@ button:hover{
 .check-button {
   position: absolute;
   right: 5rem;
+  margin-right: 5px;
 }
 .edit-form{
   border: none;
@@ -58,6 +66,7 @@ button:hover{
 .edit-button{
   position: absolute;
   right: 9rem;
+  margin-right: 10px;
 }
 
 
